@@ -9,12 +9,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import foxtopia.mods.magicalfox.MagicalFox;
 
 public class ElementLight extends Item {
 
 	public ElementLight(int id) {
 		super(id);
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(MagicalFox.tabMagicalFox);
 		setUnlocalizedName(ElementInfo.ELEMENTLIGHT_UNLOCALIZED_NAME);
 		
 	}
@@ -27,7 +28,7 @@ public class ElementLight extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemstack, EntityPlayer player, List info, boolean useExtraInfo) {
-		info.add("The Elements contain unique abilities");
+		info.add("The Element Of Light");
 		
 		}
 }

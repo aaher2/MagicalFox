@@ -4,6 +4,7 @@ import java.util.List;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import foxtopia.mods.magicalfox.MagicalFox;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,7 +18,7 @@ public class ElementFire extends Item {
 	
 	public ElementFire(int id) {
 		super(id);
-		setCreativeTab(CreativeTabs.tabMisc);
+		setCreativeTab(MagicalFox.tabMagicalFox);
 		setUnlocalizedName(ElementInfo.ELEMENTFIRE_UNLOCALIZED_NAME);
 		
 	}
@@ -30,7 +31,7 @@ public class ElementFire extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemstack, EntityPlayer player, List info, boolean useExtraInfo) {
-		info.add("The Elements contain unique abilities");
+		info.add("The Element Of Fire");
 		
 		}
 	}

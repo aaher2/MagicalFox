@@ -24,7 +24,13 @@ import foxtopia.mods.magicalfox.proxies.CommonProxy;
 
 public class MagicalFox {
 
-	
+	public static CreativeTabs tabMagicalFox = new CreativeTabs("tabMagicalFox")
+	{
+	public ItemStack getIconItemStack()
+	{
+	return new ItemStack(Item.book, 1, 0);
+	}
+	};
 	
 	
 	
@@ -36,14 +42,7 @@ public class MagicalFox {
 	@SidedProxy(clientSide = "foxtopia.mods.magicalfox.proxies.ClientProxy", serverSide = "foxtopia.mods.magicalfox.proxies.CommonProxy")
 	public static CommonProxy proxy;
 
-	public static CreativeTabs tabElements = new CreativeTabs("tabElements")
-	{
-	public ItemStack getIconItemStack()
-	{
-	return new ItemStack(Item.stick, 1, 0);
-	}
-	};
-
+	
 	
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {

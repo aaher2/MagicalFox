@@ -44,6 +44,8 @@ public class Elements {
 		LanguageRegistry.addName(ElementShadow, ElementInfo.ELEMENTSHADOW_NAME);
 		LanguageRegistry.addName(ElementSpirit, ElementInfo.ELEMENTSPIRIT_NAME);
 		
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabMagicalFox", "en_US", "Magical Fox");
+		
 		}
 		
 		
