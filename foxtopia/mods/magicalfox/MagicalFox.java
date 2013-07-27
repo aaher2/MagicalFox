@@ -22,7 +22,7 @@ public class MagicalFox {
 	public static MagicalFox instance;
 
 
-	@SidedProxy(clientSide = "aaher2.mods.techyfox.proxies.ClientProxy", serverSide = "aaher2.mods.techyfox.proxies.CommonProxy")
+	@SidedProxy(clientSide = "foxtopia.mods.magicalfox.proxies.ClientProxy", serverSide = "foxtopia.mods.magicalfox.proxies.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler
@@ -30,7 +30,8 @@ public class MagicalFox {
 
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-
+		proxy.initSounds();
+		proxy.initRenderers();
 	
 
 
