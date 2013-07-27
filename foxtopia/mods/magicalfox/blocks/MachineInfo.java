@@ -15,6 +15,9 @@ public class MachineInfo {
 	public static final String ELEMENT_MACHINE_TOP = "machine_top";
 	public static final String ELEMENT_MACHINE_BOT = "machine_bottom";
 	public static final String ELEMENT_MACHINE_SIDE = "machine_bottom";
+
+
+	
 	
 	
 }

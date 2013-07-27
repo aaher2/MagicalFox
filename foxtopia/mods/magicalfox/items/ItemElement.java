@@ -21,6 +21,7 @@ public class ItemElement extends Item {
 		super(id);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setHasSubtypes(true);
+		
 	}
 	
 	@Override

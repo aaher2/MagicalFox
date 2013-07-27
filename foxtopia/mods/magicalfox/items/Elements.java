@@ -18,7 +18,7 @@ public class Elements {
 	
 	
 	public static void addNames() {
-		
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabElements", "en_US", "Elements");
 		//elements
 		for (int i = 0; i < ElementInfo.ELEMENT_NAMES.length; i++) {
 			LanguageRegistry.addName(new ItemStack(Element,  1, i), ElementInfo.ELEMENT_NAMES[i]);

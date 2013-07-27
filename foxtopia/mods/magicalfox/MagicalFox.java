@@ -1,5 +1,8 @@
 package foxtopia.mods.magicalfox;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -8,6 +11,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import foxtopia.mods.magicalfox.blocks.Machines;
 import foxtopia.mods.magicalfox.config.ConfigHandler;
 import foxtopia.mods.magicalfox.items.Elements;
@@ -19,6 +23,10 @@ import foxtopia.mods.magicalfox.proxies.CommonProxy;
 
 public class MagicalFox {
 
+	
+	
+	
+	
 
 	@Instance(ModInfo.ID)
 	public static MagicalFox instance;
@@ -27,6 +35,15 @@ public class MagicalFox {
 	@SidedProxy(clientSide = "foxtopia.mods.magicalfox.proxies.ClientProxy", serverSide = "foxtopia.mods.magicalfox.proxies.CommonProxy")
 	public static CommonProxy proxy;
 
+	public static CreativeTabs tabElements = new CreativeTabs("tabElements")
+	{
+	public ItemStack getIconItemStack()
+	{
+	return new ItemStack(Item.stick, 1, 0);
+	}
+	};
+
+	
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
 
@@ -36,14 +53,11 @@ public class MagicalFox {
 		proxy.initRenderers();
 		
 		Elements.init();
-		Elements.addNames();
+		
 		
 		Machines.init();
-		Machines.addNames();
-	
-
-
-
+		
+		
 
 
 	}
@@ -51,7 +65,8 @@ public class MagicalFox {
 	@EventHandler
 	public static void load(FMLInitializationEvent event) {
    
-
+     Machines.addNames();
+     Elements.addNames();
 
 	}
 
