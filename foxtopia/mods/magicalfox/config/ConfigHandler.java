@@ -3,7 +3,7 @@ package foxtopia.mods.magicalfox.config;
 import java.io.File;
 
 import foxtopia.mods.magicalfox.blocks.MachineInfo;
-import foxtopia.mods.magicalfox.items.ElementInfo;
+import foxtopia.mods.magicalfox.elements.ElementInfo;
 
 import net.minecraftforge.common.Configuration;
 
@@ -22,7 +22,14 @@ public class ConfigHandler {
 
 		
 		//element
-		ElementInfo.ELEMENT_ID = config.getItem(ElementInfo.ELEMENT_KEY, ElementInfo.ELEMENT_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTFIRE_ID = config.getItem(ElementInfo.ELEMENTFIRE_KEY, ElementInfo.ELEMENTFIRE_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTWATER_ID = config.getItem(ElementInfo.ELEMENTWATER_KEY, ElementInfo.ELEMENTWATER_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTEARTH_ID = config.getItem(ElementInfo.ELEMENTEARTH_KEY, ElementInfo.ELEMENTEARTH_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTAIR_ID = config.getItem(ElementInfo.ELEMENTAIR_KEY, ElementInfo.ELEMENTAIR_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTICE_ID = config.getItem(ElementInfo.ELEMENTICE_KEY, ElementInfo.ELEMENTICE_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTLIGHT_ID = config.getItem(ElementInfo.ELEMENTLIGHT_KEY, ElementInfo.ELEMENTLIGHT_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTSHADOW_ID = config.getItem(ElementInfo.ELEMENTSHADOW_KEY, ElementInfo.ELEMENTSHADOW_DEFAULT).getInt() - 256;
+		ElementInfo.ELEMENTSPIRIT_ID = config.getItem(ElementInfo.ELEMENTSPIRIT_KEY, ElementInfo.ELEMENTSPIRIT_DEFAULT).getInt() - 256;
 
 		config.save();
 

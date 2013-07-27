@@ -14,7 +14,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import foxtopia.mods.magicalfox.blocks.Machines;
 import foxtopia.mods.magicalfox.config.ConfigHandler;
-import foxtopia.mods.magicalfox.items.Elements;
+import foxtopia.mods.magicalfox.elements.Elements;
+
 import foxtopia.mods.magicalfox.networks.PacketHandler;
 import foxtopia.mods.magicalfox.proxies.CommonProxy;
 
@@ -56,7 +57,7 @@ public class MagicalFox {
 		
 		
 		Machines.init();
-		
+	
 		
 
 
@@ -67,6 +68,8 @@ public class MagicalFox {
    
      Machines.addNames();
      Elements.addNames();
+     Elements.registerRecipes();
+     
 
 	}
 
